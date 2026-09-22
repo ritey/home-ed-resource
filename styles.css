@@ -290,6 +290,18 @@ img { display: block; max-width: 100%; }
   color: var(--text);
   max-width: 44ch;
 }
+/* Longer synopsis under the description. Stepped down a size and set on a
+   wider measure so the entry reads as one block with a clear first paragraph
+   rather than a wall at 44ch. */
+.entry__more {
+  font-size: 16.5px;
+  line-height: 1.62;
+  color: var(--text-soft);
+  max-width: 56ch;
+  margin: 0;
+}
+.entry__more + .entry__more { margin-top: 9px; }
+
 .entry__tags {
   display: flex;
   flex-wrap: wrap;

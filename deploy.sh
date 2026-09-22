@@ -15,6 +15,10 @@ rsync -avz --delete --checksum \
   --exclude 'shot.py' \
   --exclude 'deploy.sh' \
   --exclude 'README.md' \
+  --exclude '.build-stamp' \
+  --exclude 'index.html.hand-edited' \
+  --exclude '*.pyc' \
+  --exclude '__pycache__/' \
   --exclude '.DS_Store' \
   ./ "$HOST:$DEST"
 

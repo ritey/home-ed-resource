@@ -11,6 +11,7 @@ rather than edited directly. Edit resources.json, then run:
 No dependencies. Python 3.8+.
 """
 
+import hashlib
 import html
 import json
 import re
@@ -23,6 +24,14 @@ OUT = ROOT / "index.html"
 
 
 # --- helpers ---------------------------------------------------------------
+
+def css_hash():
+    """Short content hash so a changed stylesheet busts caches by itself."""
+    css = ROOT / "styles.css"
+    if not css.exists():
+        return "1"
+    return hashlib.sha256(css.read_bytes()).hexdigest()[:8]
+
 
 def esc(s):
     """Escape for HTML text/attribute context."""
@@ -61,6 +70,12 @@ def load():
             sys.exit(f"error: {r['title']!r} has unknown tier {r['tier']!r}")
         if r["url"] in seen:
             sys.exit(f"error: duplicate url {r['url']!r}")
+        more = r.get("more")
+        if more is not None:
+            if not isinstance(more, list) or not all(
+                    isinstance(x, str) and x.strip() for x in more):
+                sys.exit(f"error: {r['title']!r} has a bad 'more' — "
+                         "expected a list of non-empty strings, one per paragraph")
         seen.add(r["url"])
         r["_checked"] = parse_date(r["lastChecked"])
 
@@ -74,12 +89,23 @@ def load():
 def render_entry(r):
     tags = "".join(f'\n              <li class="tag">{esc(t)}</li>' for t in r["tags"])
 
+    # Optional longer synopsis, one <p> per item. Drawn from the resource's own
+    # site rather than from our use of it, so it reads as description, not
+    # recommendation -- the first paragraph stays the one in our voice.
+    more = "".join(f'\n              <p class="entry__more">{esc(m)}</p>'
+                   for m in r.get("more", []))
+
     if r.get("image"):
-        # Decorative: the title beside it is the real link, so alt="" and the
-        # wrapper is kept out of the tab order.
-        thumb = (f'<a class="entry__thumb" href="{esc(r["url"])}" tabindex="-1" aria-hidden="true"\n'
+        # An empty imageAlt (or none) means the thumbnail is decorative: the
+        # title beside it is the real link, so alt="" and the wrapper stays out
+        # of the tab order, per the handoff. Give it alt text and it becomes
+        # meaningful content, so the wrapper must NOT be aria-hidden -- an
+        # aria-hidden ancestor would stop any screen reader announcing the alt.
+        alt = r.get("imageAlt", "").strip()
+        hidden = "" if alt else ' tabindex="-1" aria-hidden="true"'
+        thumb = (f'<a class="entry__thumb" href="{esc(r["url"])}"{hidden}\n'
                  f'               target="_blank" rel="noopener noreferrer nofollow">\n'
-                 f'              <img src="{esc(r["image"])}" alt="" width="266" height="140"\n'
+                 f'              <img src="{esc(r["image"])}" alt="{esc(alt)}" width="266" height="140"\n'
                  f'                   loading="lazy" decoding="async">\n'
                  f'            </a>')
     else:
@@ -94,7 +120,7 @@ def render_entry(r):
                 </h3>
                 <span class="entry__checked">we last looked <time datetime="{r['lastChecked']}">{short_date(r['_checked'])}</time></span>
               </div>
-              <p class="entry__description">{esc(r['description'])}</p>
+              <p class="entry__description">{esc(r['description'])}</p>{more}
               <ul class="entry__tags">{tags}
                 <li class="entry__domain">{esc(r['domain'])}</li>
               </ul>
@@ -224,7 +250,7 @@ def render_page(data):
     page = TEMPLATE
     repl = {
         "@@TITLE@@": esc(site["title"]),
-        "@@DESC@@": esc(site["description"]),
+        "@@DESC@@": esc(site.get("metaDescription") or site["description"]),
         "@@SHARE_DESC@@": esc(site["shareDescription"]),
         "@@BASE@@": esc(base),
         "@@NAME@@": esc(site["name"]),
@@ -238,6 +264,7 @@ def render_page(data):
         "@@EMAIL_DOMAIN@@": esc(domain),
         "@@EMAIL_REVERSED@@": esc(site["email"][::-1]),
         "@@YEAR@@": str(updated.year),
+        "@@CSSHASH@@": css_hash(),
     }
     for k, v in repl.items():
         page = page.replace(k, v)
@@ -291,7 +318,7 @@ TEMPLATE = r"""<!DOCTYPE html>
 
 <link rel="preload" href="fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/karla-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=@@CSSHASH@@">
 
 <script type="application/ld+json">
 @@JSONLD@@
@@ -397,6 +424,10 @@ def render_llms(data, updated, by_tier):
             for r in entries:
                 out.append(f"- [{r['title']}]({r['url']}): {r['description']} "
                            f"({' · '.join(r['tags'])}. Last checked {r['lastChecked']}.)")
+                # The synopsis is the part an answer engine is most likely to
+                # quote, so carry it here too, indented under its entry.
+                for para in r.get("more", []):
+                    out.append(f"  {para}")
         else:
             out.append(f"- {tier['empty']}")
         out.append("")
@@ -426,13 +457,36 @@ def render_sitemap(site, updated):
 """
 
 
+STAMP = ROOT / ".build-stamp"
+
+
+def guard_hand_edits(page):
+    """index.html is generated. If it has been edited since the last build,
+    keep a copy rather than silently throwing the edits away."""
+    if not OUT.exists() or not STAMP.exists():
+        return
+    current = hashlib.sha256(OUT.read_bytes()).hexdigest()
+    if current == STAMP.read_text().strip():
+        return                      # untouched since we wrote it
+    if hashlib.sha256(page.encode("utf-8")).hexdigest() == current:
+        return                      # edited, but the build reproduces it exactly
+    backup = ROOT / "index.html.hand-edited"
+    backup.write_bytes(OUT.read_bytes())
+    print("!  index.html had hand edits since the last build.")
+    print(f"!  Saved them to {backup.name} before overwriting.")
+    print("!  index.html is generated - move the changes into resources.json,")
+    print("!  styles.css or build.py so they survive the next build.")
+
+
 def main():
     data = load()
     page, updated, total = render_page(data)
+    guard_hand_edits(page)
     by_tier = {t["id"]: [r for r in data["resources"] if r["tier"] == t["id"]]
                for t in data["tiers"]}
 
     OUT.write_text(page, encoding="utf-8")
+    STAMP.write_text(hashlib.sha256(page.encode("utf-8")).hexdigest() + "\n")
     (ROOT / "llms.txt").write_text(render_llms(data, updated, by_tier), encoding="utf-8")
     (ROOT / "sitemap.xml").write_text(render_sitemap(data["site"], updated), encoding="utf-8")
 

@@ -1,0 +1,56 @@
+{
+  "site": {
+    "name": "Home Ed Resource",
+    "url": "https://homeedresource.co.uk/",
+    "email": "hello@homeedresource.co.uk",
+    "locale": "en-GB",
+    "title": "Home Ed Resource | Good stuff for home ed, all in one place",
+    "description": "A list of home education websites that a UK home ed family have actually used, with a note on who each one suited and when we last checked it. Free things first, paid things underneath.",
+    "shareDescription": "We kept forgetting which home ed websites were any good, so we started writing them down. Free things first, paid things underneath.",
+    "standingPill": "No ads, no affiliate links"
+  },
+  "tiers": [
+    {
+      "id": "free",
+      "label": "Free",
+      "aside": "genuinely free, not a trial that turns into a bill",
+      "empty": "Nothing free on the list at the moment."
+    },
+    {
+      "id": "paid",
+      "label": "Paid",
+      "aside": "nothing here yet, and that's on purpose",
+      "empty": "We're trying a couple of paid things at the moment. We'd rather use them for a term before telling you to spend money on them, so this bit stays empty for now."
+    }
+  ],
+  "resources": [
+    {
+      "title": "iDEA",
+      "url": "https://idea.org.uk",
+      "domain": "idea.org.uk",
+      "tier": "free",
+      "description": "Little online modules about computers, money and work skills. You earn badges as you go, and they add up to a Bronze, Silver or Gold award. Handy if you like having something to show for the term.",
+      "tags": [
+        "Good from about 8",
+        "Do it in any order",
+        "Fine on a phone"
+      ],
+      "lastChecked": "2026-09-18",
+      "image": "images/idea-org-uk.png"
+    },
+    {
+      "title": "Do Revision",
+      "url": "https://dorevision.com",
+      "domain": "dorevision.com",
+      "tier": "free",
+      "description": "Revision questions and a plan for what to do next. The plan is the bit we found useful — without a school timetable, someone has to decide what gets revised today, and this does it for you.",
+      "tags": [
+        "Teens",
+        "GCSE",
+        "Free bit is usable"
+      ],
+      "lastChecked": "2026-09-11",
+      "image": "images/dorevision-com.png"
+    }
+  ]
+}

@@ -1,375 +1,289 @@
 <!DOCTYPE html>
-<html lang="en-GB" class="scroll-smooth">
+<html lang="en-GB">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Home Ed Resource - a curated list of home education resources</title>
-<meta name="description" content="A hand-picked, regularly updated list of free and paid home education resources for UK home educating families.">
-<meta name="theme-color" content="#0f766e">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Home Ed Resource | Good stuff for home ed, all in one place</title>
+<meta name="description" content="A list of home education websites that a UK home ed family have actually used, with a note on who each one suited and when we last checked it. Free things first, paid things underneath.">
+<link rel="canonical" href="https://homeedresource.co.uk/">
+<meta name="theme-color" content="#fdf3e4">
+<meta name="color-scheme" content="light">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 
 <!-- Open Graph -->
-<meta property="og:title" content="Home Ed Resource">
-<meta property="og:description" content="A hand-picked list of free and paid home education resources.">
+<meta property="og:site_name" content="Home Ed Resource">
+<meta property="og:locale" content="en_GB">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://homeedresource.co.uk/">
+<meta property="og:title" content="Home Ed Resource | Good stuff for home ed, all in one place">
+<meta property="og:description" content="We kept forgetting which home ed websites were any good, so we started writing them down. Free things first, paid things underneath.">
+<meta property="og:image" content="https://homeedresource.co.uk/og-image.png">
+<meta property="og:image:secure_url" content="https://homeedresource.co.uk/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Home Ed Resource — good stuff for home ed, all in one place.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Home Ed Resource | Good stuff for home ed, all in one place">
+<meta name="twitter:description" content="We kept forgetting which home ed websites were any good, so we started writing them down. Free things first, paid things underneath.">
+<meta name="twitter:image" content="https://homeedresource.co.uk/og-image.png">
+<meta name="twitter:image:alt" content="Home Ed Resource — good stuff for home ed, all in one place.">
 
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        fontFamily: {
-          sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-          display: ['Fraunces', 'ui-serif', 'Georgia', 'serif'],
-        },
+<!-- Icons -->
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<link rel="preload" href="fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/karla-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://homeedresource.co.uk/#organization",
+      "name": "Home Ed Resource",
+      "url": "https://homeedresource.co.uk/",
+      "description": "A list of home education websites that a UK home ed family have actually used, with a note on who each one suited and when we last checked it. Free things first, paid things underneath.",
+      "areaServed": {
+        "@type": "Country",
+        "name": "United Kingdom"
       },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "editorial",
+        "url": "https://homeedresource.co.uk/#suggest"
+      },
+      "knowsAbout": [
+        "home education",
+        "elective home education",
+        "home schooling",
+        "GCSE revision",
+        "digital skills",
+        "curriculum resources"
+      ]
     },
-  };
-</script>
-
-<style>
-  /* Soft blurred colour wash behind the hero */
-  .aurora::before,
-  .aurora::after {
-    content: "";
-    position: absolute;
-    border-radius: 9999px;
-    filter: blur(80px);
-    opacity: .5;
-    pointer-events: none;
-  }
-  .aurora::before { width: 28rem; height: 28rem; top: -8rem; left: -6rem;  background: #5eead4; }
-  .aurora::after  { width: 24rem; height: 24rem; top: -4rem; right: -6rem; background: #c4b5fd; }
-
-  @media (prefers-reduced-motion: no-preference) {
-    .reveal { animation: reveal .6s cubic-bezier(.22,1,.36,1) both; }
-    @keyframes reveal {
-      from { opacity: 0; transform: translateY(12px); }
-      to   { opacity: 1; transform: none; }
+    {
+      "@type": "WebSite",
+      "@id": "https://homeedresource.co.uk/#website",
+      "url": "https://homeedresource.co.uk/",
+      "name": "Home Ed Resource",
+      "description": "A list of home education websites that a UK home ed family have actually used, with a note on who each one suited and when we last checked it. Free things first, paid things underneath.",
+      "publisher": {
+        "@id": "https://homeedresource.co.uk/#organization"
+      },
+      "inLanguage": "en-GB"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://homeedresource.co.uk/#webpage",
+      "url": "https://homeedresource.co.uk/",
+      "name": "Home Ed Resource | Good stuff for home ed, all in one place",
+      "description": "A list of home education websites that a UK home ed family have actually used, with a note on who each one suited and when we last checked it. Free things first, paid things underneath.",
+      "isPartOf": {
+        "@id": "https://homeedresource.co.uk/#website"
+      },
+      "about": {
+        "@id": "https://homeedresource.co.uk/#organization"
+      },
+      "inLanguage": "en-GB",
+      "dateModified": "2026-09-18",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://homeedresource.co.uk/og-image.png",
+        "width": 1200,
+        "height": 630
+      },
+      "mainEntity": {
+        "@id": "https://homeedresource.co.uk/#resource-list"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://homeedresource.co.uk/#resource-list",
+      "name": "Home education resources",
+      "description": "A list of home education websites that a UK home ed family have actually used, with a note on who each one suited and when we last checked it. Free things first, paid things underneath.",
+      "numberOfItems": 2,
+      "itemListOrder": "https://schema.org/ItemListUnordered",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "WebSite",
+            "@id": "https://idea.org.uk/#website",
+            "name": "iDEA",
+            "url": "https://idea.org.uk",
+            "description": "Little online modules about computers, money and work skills. You earn badges as you go, and they add up to a Bronze, Silver or Gold award. Handy if you like having something to show for the term.",
+            "inLanguage": "en-GB",
+            "isAccessibleForFree": true,
+            "dateModified": "2026-09-18",
+            "keywords": [
+              "Good from about 8",
+              "Do it in any order",
+              "Fine on a phone"
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "WebSite",
+            "@id": "https://dorevision.com/#website",
+            "name": "Do Revision",
+            "url": "https://dorevision.com",
+            "description": "Revision questions and a plan for what to do next. The plan is the bit we found useful — without a school timetable, someone has to decide what gets revised today, and this does it for you.",
+            "inLanguage": "en-GB",
+            "isAccessibleForFree": true,
+            "dateModified": "2026-09-11",
+            "keywords": [
+              "Teens",
+              "GCSE",
+              "Free bit is usable"
+            ]
+          }
+        }
+      ]
     }
-  }
-</style>
+  ]
+}
+</script>
 </head>
 
-<body class="bg-stone-50 font-sans text-stone-800 antialiased selection:bg-teal-200 selection:text-teal-950">
+<body>
+<a class="skip-link" href="#free">Skip to the list</a>
 
-<a href="#resources" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:font-medium focus:shadow-lg focus:ring-2 focus:ring-teal-600">Skip to resources</a>
+<div class="page">
 
-<!-- ───────────────────────── Header / Hero ───────────────────────── -->
-<header class="aurora relative isolate overflow-hidden border-b border-stone-200/80">
-  <div class="absolute inset-0 -z-10 bg-gradient-to-b from-white via-stone-50 to-stone-50"></div>
-
-  <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-    <a href="/" class="flex items-center gap-2.5 font-display text-lg font-semibold tracking-tight text-stone-900">
-      <span class="grid h-9 w-9 place-items-center rounded-xl bg-teal-700 text-white shadow-sm shadow-teal-700/25" aria-hidden="true">
-        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M3 5.5A1.5 1.5 0 0 1 4.5 4H9a3 3 0 0 1 3 3v12a2.5 2.5 0 0 0-2.5-2.5H3Z"/>
-          <path d="M21 5.5A1.5 1.5 0 0 0 19.5 4H15a3 3 0 0 0-3 3v12a2.5 2.5 0 0 1 2.5-2.5H21Z"/>
-        </svg>
-      </span>
-      Home&nbsp;Ed&nbsp;Resource
+  <header class="masthead">
+    <a class="masthead__brand" href="/">
+      <span class="brand-dot" aria-hidden="true"></span>
+      <span class="wordmark">Home Ed Resource</span>
     </a>
-    <div class="flex items-center gap-1 text-sm font-medium sm:gap-2">
-      <a href="#resources" class="rounded-lg px-3 py-2 text-stone-600 transition hover:bg-stone-100 hover:text-stone-900">Resources</a>
-      <a href="#newsletter" class="rounded-lg bg-stone-900 px-3.5 py-2 text-white transition hover:bg-stone-700">Newsletter</a>
+    <nav aria-label="Primary">
+      <a href="#free">The list</a>
+      <a href="#who">Who we are</a>
+      <a href="#suggest">Send us one</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <h1>Good stuff for home ed, all in one place.</h1>
+      <p class="intro__lede">We're a home ed family in the UK, and we kept forgetting which websites were any good. So we started writing them down. Here's the list &mdash; free things first, paid things underneath, with a note on who each one suited us for.</p>
+      <ul class="pills">
+        <li class="pill">2 things so far</li>
+        <li class="pill">Updated 18 September</li>
+        <li class="pill">No ads, no affiliate links</li>
+      </ul>
     </div>
-  </nav>
 
-  <div class="mx-auto max-w-6xl px-6 pb-20 pt-10 sm:pb-24 sm:pt-16">
-    <div class="max-w-3xl reveal">
-      <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-teal-700/15 bg-teal-700/5 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-teal-800">
-        <span class="h-1.5 w-1.5 rounded-full bg-teal-600" aria-hidden="true"></span>
-        Curated for home educators
-      </p>
-      <h1 class="font-display text-4xl font-bold leading-[1.08] tracking-tight text-stone-900 text-balance sm:text-5xl md:text-6xl">
-        Home education resources,
-        <span class="text-teal-700">without the endless searching.</span>
-      </h1>
-      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-stone-600 text-pretty sm:text-xl">
-        A growing, hand-checked list of things that actually help - split simply into what's
-        free and what's worth paying for. No affiliate noise, no filler.
-      </p>
-      <div class="mt-9 flex flex-wrap items-center gap-3">
-        <a href="#resources" class="inline-flex items-center gap-2 rounded-xl bg-teal-700 px-5 py-3 text-sm font-semibold text-white shadow-sm shadow-teal-700/20 transition hover:bg-teal-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-700 focus-visible:ring-offset-2">
-          Browse the list
-          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
-        </a>
-        <a href="#newsletter" class="inline-flex items-center gap-2 rounded-xl border border-stone-300 bg-white px-5 py-3 text-sm font-semibold text-stone-700 transition hover:border-stone-400 hover:bg-stone-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-400 focus-visible:ring-offset-2">
-          Get monthly updates
-        </a>
-      </div>
+    <section aria-labelledby="free-heading" id="free">
+    <div class="section-head">
+      <h2 id="free-heading">Free</h2>
+      <span class="section-head__aside">&mdash; genuinely free, not a trial that turns into a bill</span>
     </div>
-  </div>
-</header>
-
-<main>
-  <!-- ───────────────────────── Resources ───────────────────────── -->
-  <section id="resources" class="mx-auto max-w-6xl scroll-mt-8 px-6 py-16 sm:py-20">
-
-    <div class="grid gap-10 lg:grid-cols-2 lg:gap-8">
-
-      <!-- ── Free column ── -->
-      <div>
-        <div class="mb-6 flex items-baseline justify-between gap-4 border-b border-stone-200 pb-4">
-          <h2 class="flex items-center gap-2.5 font-display text-2xl font-semibold tracking-tight text-stone-900">
-            <span class="grid h-8 w-8 place-items-center rounded-lg bg-emerald-600/10 text-emerald-700" aria-hidden="true">
-              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-            </span>
-            Free resources
-          </h2>
-          <span class="shrink-0 rounded-full bg-emerald-600/10 px-2.5 py-1 text-xs font-semibold text-emerald-700">No cost</span>
-        </div>
-
-        <ul class="space-y-4">
-
-          <!-- iDEA -->
-          <li>
-            <article class="group relative h-full rounded-2xl border border-stone-200 bg-white p-6 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-teal-600/40 hover:shadow-md hover:shadow-stone-900/5 focus-within:ring-2 focus-within:ring-teal-600 focus-within:ring-offset-2">
-              <div class="flex items-start justify-between gap-4">
-                <h3 class="font-display text-lg font-semibold tracking-tight text-stone-900">
-                  <a href="https://idea.org.uk" target="_blank" rel="noopener noreferrer" class="focus:outline-none">
-                    <span class="absolute inset-0" aria-hidden="true"></span>
-                    iDEA
-                  </a>
+    <div class="entries">
+          <article class="entry">
+            <div class="entry__main">
+              <div class="entry__head">
+                <h3 class="entry__title">
+                  <a href="https://idea.org.uk" target="_blank" rel="noopener noreferrer nofollow">iDEA</a>
                 </h3>
-                <svg class="h-4 w-4 shrink-0 translate-y-1 text-stone-400 transition group-hover:-translate-y-0 group-hover:text-teal-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+                <span class="entry__checked">we last looked <time datetime="2026-09-18">18 Sep</time></span>
               </div>
-              <p class="mt-2.5 text-sm leading-relaxed text-stone-600 text-pretty">
-                Free online badges and awards in digital, enterprise and employability skills.
-                Learners work through short, self-paced modules and build towards Bronze, Silver
-                and Gold awards - a tidy, evidenceable record of what's been covered.
-              </p>
-              <div class="mt-4 flex flex-wrap items-center gap-2">
-                <span class="rounded-md bg-stone-100 px-2 py-1 text-xs font-medium text-stone-600">Digital skills</span>
-                <span class="rounded-md bg-stone-100 px-2 py-1 text-xs font-medium text-stone-600">Awards</span>
-                <span class="rounded-md bg-stone-100 px-2 py-1 text-xs font-medium text-stone-600">Ages 8+</span>
-              </div>
-              <p class="mt-4 font-mono text-xs text-stone-400">idea.org.uk</p>
-            </article>
-          </li>
-
-          <!-- Do Revision -->
-          <li>
-            <article class="group relative h-full rounded-2xl border border-stone-200 bg-white p-6 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-teal-600/40 hover:shadow-md hover:shadow-stone-900/5 focus-within:ring-2 focus-within:ring-teal-600 focus-within:ring-offset-2">
-              <div class="flex items-start justify-between gap-4">
-                <h3 class="font-display text-lg font-semibold tracking-tight text-stone-900">
-                  <a href="https://dorevision.com" target="_blank" rel="noopener noreferrer" class="focus:outline-none">
-                    <span class="absolute inset-0" aria-hidden="true"></span>
-                    Do Revision
-                  </a>
-                </h3>
-                <svg class="h-4 w-4 shrink-0 translate-y-1 text-stone-400 transition group-hover:-translate-y-0 group-hover:text-teal-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-              </div>
-              <p class="mt-2.5 text-sm leading-relaxed text-stone-600 text-pretty">
-                Revision practice and structured study support for exam-age learners. Useful
-                for keeping revision organised and consistent when you're working without a
-                school timetable to lean on.
-              </p>
-              <div class="mt-4 flex flex-wrap items-center gap-2">
-                <span class="rounded-md bg-stone-100 px-2 py-1 text-xs font-medium text-stone-600">Revision</span>
-                <span class="rounded-md bg-stone-100 px-2 py-1 text-xs font-medium text-stone-600">Exams</span>
-                <span class="rounded-md bg-stone-100 px-2 py-1 text-xs font-medium text-stone-600">Secondary</span>
-              </div>
-              <p class="mt-4 font-mono text-xs text-stone-400">dorevision.com</p>
-            </article>
-          </li>
-
-          <!-- Suggest a resource -->
-          <li>
-            <a href="mailto:hello@homeedresource.co.uk?subject=Free%20resource%20suggestion"
-               class="flex h-full items-center gap-3 rounded-2xl border border-dashed border-stone-300 bg-transparent p-6 text-sm text-stone-500 transition hover:border-teal-600/50 hover:bg-white hover:text-stone-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600 focus-visible:ring-offset-2">
-              <svg class="h-5 w-5 shrink-0 text-stone-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
-              <span>Know a free resource worth adding? <span class="font-semibold text-teal-700">Tell us about it.</span></span>
+              <p class="entry__description">Little online modules about computers, money and work skills. You earn badges as you go, and they add up to a Bronze, Silver or Gold award. Handy if you like having something to show for the term.</p>
+              <ul class="entry__tags">
+              <li class="tag">Good from about 8</li>
+              <li class="tag">Do it in any order</li>
+              <li class="tag">Fine on a phone</li>
+                <li class="entry__domain">idea.org.uk</li>
+              </ul>
+            </div>
+            <a class="entry__thumb" href="https://idea.org.uk" tabindex="-1" aria-hidden="true"
+               target="_blank" rel="noopener noreferrer nofollow">
+              <img src="images/idea-org-uk.png" alt="" width="266" height="140"
+                   loading="lazy" decoding="async">
             </a>
-          </li>
-
-        </ul>
-      </div>
-
-      <!-- ── Paid column ── -->
-      <div>
-        <div class="mb-6 flex items-baseline justify-between gap-4 border-b border-stone-200 pb-4">
-          <h2 class="flex items-center gap-2.5 font-display text-2xl font-semibold tracking-tight text-stone-900">
-            <span class="grid h-8 w-8 place-items-center rounded-lg bg-violet-600/10 text-violet-700" aria-hidden="true">
-              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 6.5C17 4.6 14.8 3.5 12 3.5S7 4.6 7 6.5s2 2.8 5 3.5 5 1.6 5 3.5-2.2 3-5 3-5-1.1-5-3"/></svg>
-            </span>
-            Paid resources
-          </h2>
-          <span class="shrink-0 rounded-full bg-violet-600/10 px-2.5 py-1 text-xs font-semibold text-violet-700">Subscription&nbsp;/&nbsp;one-off</span>
-        </div>
-
-        <!-- Empty state -->
-        <div class="rounded-2xl border border-stone-200 bg-white p-8 text-center shadow-sm">
-          <div class="mx-auto grid h-12 w-12 place-items-center rounded-xl bg-stone-100 text-stone-400" aria-hidden="true">
-            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="9"/></svg>
-          </div>
-          <h3 class="mt-4 font-display text-lg font-semibold tracking-tight text-stone-900">First entries coming soon</h3>
-          <p class="mx-auto mt-2 max-w-sm text-sm leading-relaxed text-stone-600 text-pretty">
-            We're working through paid curricula, tutoring platforms and subscription services
-            so we only list the ones that earn their price. Sign up below and you'll get them
-            as they land.
-          </p>
-          <a href="#newsletter" class="mt-5 inline-flex items-center gap-2 rounded-xl border border-stone-300 bg-white px-4 py-2.5 text-sm font-semibold text-stone-700 transition hover:border-stone-400 hover:bg-stone-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-400 focus-visible:ring-offset-2">
-            Get notified
-          </a>
-        </div>
-
-        <!-- Suggest a resource -->
-        <a href="mailto:hello@homeedresource.co.uk?subject=Paid%20resource%20suggestion"
-           class="mt-4 flex items-center gap-3 rounded-2xl border border-dashed border-stone-300 bg-transparent p-6 text-sm text-stone-500 transition hover:border-violet-600/50 hover:bg-white hover:text-stone-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-600 focus-visible:ring-offset-2">
-          <svg class="h-5 w-5 shrink-0 text-stone-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
-          <span>Used something paid that was genuinely worth it? <span class="font-semibold text-violet-700">Let us know.</span></span>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ───────────────────────── Newsletter ───────────────────────── -->
-  <section id="newsletter" class="scroll-mt-8 border-y border-stone-200 bg-white">
-    <div class="mx-auto max-w-6xl px-6 py-16 sm:py-20">
-      <div class="relative isolate overflow-hidden rounded-3xl bg-stone-900 px-6 py-12 shadow-xl shadow-stone-900/10 sm:px-12 sm:py-16">
-        <div class="absolute -right-24 -top-24 -z-10 h-72 w-72 rounded-full bg-teal-500/20 blur-3xl" aria-hidden="true"></div>
-        <div class="absolute -bottom-28 -left-20 -z-10 h-72 w-72 rounded-full bg-violet-500/20 blur-3xl" aria-hidden="true"></div>
-
-        <div class="grid items-center gap-10 lg:grid-cols-2">
-          <div>
-            <h2 class="font-display text-3xl font-bold tracking-tight text-white text-balance sm:text-4xl">
-              One email a month. That's it.
-            </h2>
-            <p class="mt-4 max-w-md text-base leading-relaxed text-stone-300 text-pretty">
-              New resources, what we've tried, and the occasional thing worth avoiding.
-              No spam, no sharing your address, unsubscribe in one click.
-            </p>
-            <ul class="mt-6 space-y-2.5 text-sm text-stone-400">
-              <li class="flex items-center gap-2.5">
-                <svg class="h-4 w-4 shrink-0 text-teal-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-                Monthly - never more often
-              </li>
-              <li class="flex items-center gap-2.5">
-                <svg class="h-4 w-4 shrink-0 text-teal-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-                Free and paid picks, clearly labelled
-              </li>
-              <li class="flex items-center gap-2.5">
-                <svg class="h-4 w-4 shrink-0 text-teal-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-                Your email is never sold or shared
-              </li>
-            </ul>
-          </div>
-
-          <!--
-            ────────────────────────────────────────────────────────────
-            NEWSLETTER EMBED DROP-IN POINT
-            ────────────────────────────────────────────────────────────
-            Replace the contents of the div below with the embed snippet
-            from your provider (Buttondown, ConvertKit, Mailchimp,
-            MailerLite, Beehiiv, EmailOctopus …).
-
-            The markup below is a non-functional placeholder: the form
-            has no action and submitting it does nothing. Keep the
-            wrapper div so the layout and spacing still hold.
-            ────────────────────────────────────────────────────────────
-          -->
-          <div id="newsletter-embed" class="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10 backdrop-blur-sm sm:p-8">
-            <form onsubmit="return false;" aria-describedby="newsletter-note">
-              <label for="newsletter-email" class="block text-sm font-semibold text-white">
-                Email address
-              </label>
-              <div class="mt-2 flex flex-col gap-3 sm:flex-row">
-                <input
-                  id="newsletter-email"
-                  name="email"
-                  type="email"
-                  autocomplete="email"
-                  required
-                  placeholder="you@example.com"
-                  class="w-full rounded-xl border-0 bg-white/10 px-4 py-3 text-white placeholder:text-stone-500 ring-1 ring-inset ring-white/15 transition focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-400"
-                >
-                <button
-                  type="submit"
-                  class="shrink-0 rounded-xl bg-teal-500 px-5 py-3 text-sm font-semibold text-stone-950 transition hover:bg-teal-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-300 focus-visible:ring-offset-2 focus-visible:ring-offset-stone-900">
-                  Subscribe
-                </button>
+          </article>
+          <article class="entry">
+            <div class="entry__main">
+              <div class="entry__head">
+                <h3 class="entry__title">
+                  <a href="https://dorevision.com" target="_blank" rel="noopener noreferrer nofollow">Do Revision</a>
+                </h3>
+                <span class="entry__checked">we last looked <time datetime="2026-09-11">11 Sep</time></span>
               </div>
-              <p id="newsletter-note" class="mt-3 text-xs leading-relaxed text-stone-400">
-                Sign-up isn't live yet - the form is a placeholder until the mailing
-                provider is connected. In the meantime, email
-                <a href="mailto:hello@homeedresource.co.uk?subject=Newsletter" class="font-medium text-teal-400 underline decoration-teal-400/40 underline-offset-2 hover:decoration-teal-400">hello@homeedresource.co.uk</a>
-                to be added by hand.
-              </p>
-            </form>
-          </div>
-
-        </div>
-      </div>
+              <p class="entry__description">Revision questions and a plan for what to do next. The plan is the bit we found useful — without a school timetable, someone has to decide what gets revised today, and this does it for you.</p>
+              <ul class="entry__tags">
+              <li class="tag">Teens</li>
+              <li class="tag">GCSE</li>
+              <li class="tag">Free bit is usable</li>
+                <li class="entry__domain">dorevision.com</li>
+              </ul>
+            </div>
+            <a class="entry__thumb" href="https://dorevision.com" tabindex="-1" aria-hidden="true"
+               target="_blank" rel="noopener noreferrer nofollow">
+              <img src="images/dorevision-com.png" alt="" width="266" height="140"
+                   loading="lazy" decoding="async">
+            </a>
+          </article>
     </div>
-  </section>
-</main>
+    </section>
 
-<!-- ───────────────────────── Footer ───────────────────────── -->
-<footer class="bg-stone-50">
-  <div class="mx-auto max-w-6xl px-6 py-14">
-    <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-
-      <div>
-        <div class="flex items-center gap-2.5 font-display text-base font-semibold tracking-tight text-stone-900">
-          <span class="grid h-8 w-8 place-items-center rounded-lg bg-teal-700 text-white" aria-hidden="true">
-            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 5.5A1.5 1.5 0 0 1 4.5 4H9a3 3 0 0 1 3 3v12a2.5 2.5 0 0 0-2.5-2.5H3Z"/>
-              <path d="M21 5.5A1.5 1.5 0 0 0 19.5 4H15a3 3 0 0 0-3 3v12a2.5 2.5 0 0 1 2.5-2.5H21Z"/>
-            </svg>
-          </span>
-          Home Ed Resource
-        </div>
-        <p class="mt-3 text-sm leading-relaxed text-stone-600">
-          An independent, hand-curated list for home educating families.
-        </p>
-        <p class="mt-4 text-sm text-stone-500">
-          Last updated:
-          <!-- Update this date whenever the list changes -->
-          <time datetime="2026-09-22" class="font-medium text-stone-700">22 September 2026</time>
-        </p>
-      </div>
-
-      <div>
-        <h2 class="text-xs font-semibold uppercase tracking-wider text-stone-500">Get in touch</h2>
-        <p class="mt-3 text-sm leading-relaxed text-stone-600">
-          Suggestions, corrections, or a resource we've missed - we'd like to hear it.
-        </p>
-        <a href="mailto:hello@homeedresource.co.uk"
-           class="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-teal-700 underline decoration-teal-700/30 underline-offset-4 transition hover:decoration-teal-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600 focus-visible:ring-offset-2 focus-visible:rounded">
-          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
-          hello@homeedresource.co.uk
-        </a>
-      </div>
-
-      <div class="sm:col-span-2 lg:col-span-1">
-        <h2 class="text-xs font-semibold uppercase tracking-wider text-stone-500">Disclaimer</h2>
-        <p class="mt-3 text-sm leading-relaxed text-stone-600 text-pretty">
-          Home Ed Resource links to third-party websites that we do not own, operate or control.
-          We are not responsible for the content, accuracy, availability, pricing, safety or
-          privacy practices of any external site, and a listing here is not an endorsement or a
-          guarantee of suitability. Please review each site yourself - and supervise children's
-          use of it - before relying on it. Any dealings you have with a third party are solely
-          between you and them.
-        </p>
-      </div>
-
+    <section aria-labelledby="paid-heading" id="paid">
+    <div class="section-head section-head--paid">
+      <h2 id="paid-heading">Paid</h2>
+      <span class="section-head__aside">&mdash; nothing here yet, and that&#x27;s on purpose</span>
     </div>
+    <p class="section__empty">We&#x27;re trying a couple of paid things at the moment. We&#x27;d rather use them for a term before telling you to spend money on them, so this bit stays empty for now.</p>
+    </section>
 
-    <div class="mt-12 flex flex-col gap-3 border-t border-stone-200 pt-6 text-xs text-stone-500 sm:flex-row sm:items-center sm:justify-between">
-      <p>&copy; <span id="year">2026</span> Home Ed Resource. All rights reserved.</p>
-      <p>Made for home educators in the UK.</p>
+  </main>
+
+  <div class="two-up">
+    <div class="two-up__col" id="who">
+      <h2>Who's behind this</h2>
+      <p>Just us &mdash; a family home educating in the UK. Nobody pays to be on the list, there are no affiliate links, and if something stops being useful we take it off rather than leave it sitting there. Each one says when we last checked it.</p>
+    </div>
+    <div class="two-up__col" id="suggest">
+      <h2>Got one for us?</h2>
+      <p>If something's worked for your lot, we'd love to hear about it. The link and a sentence about who it suited is plenty.</p>
+      <a class="button" id="contact-email" href="#suggest" data-u="hello" data-d="homeedresource.co.uk"><span class="email-reverse">ku.oc.ecruoserdeemoh@olleh</span></a>
     </div>
   </div>
-</footer>
+
+  <footer class="footer">
+    <p class="footer__disclaimer">These are other people's websites, so do have a look yourself before you rely on one &mdash; us listing it isn't a promise.</p>
+    <div class="footer__meta">
+      <span>Want an email when we add something? <a href="#suggest">Yes please</a></span>
+      <span>&copy; 2026 Home Ed Resource</span>
+    </div>
+  </footer>
+
+</div>
 
 <script>
-  document.getElementById('year').textContent = new Date().getFullYear();
+  /* Assemble the mailto at runtime so the address is not sitting in the
+     markup for harvesters. Without JS the reversed text still reads
+     correctly and the link falls back to the contact block. */
+  (function () {
+    var a = document.getElementById('contact-email');
+    if (!a) return;
+    var addr = a.dataset.u + String.fromCharCode(64) + a.dataset.d;
+    a.href = 'mailto:' + addr;
+    a.textContent = addr;
+  })();
 </script>
 
 </body>

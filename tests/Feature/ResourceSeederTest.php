@@ -31,7 +31,8 @@ class ResourceSeederTest extends TestCase
         $idea = Resource::with('category', 'categories')->firstWhere('url', 'https://idea.org.uk');
         $this->assertSame(Tier::Free, $idea->tier);
         $this->assertSame('computing-digital', $idea->category->slug);
-        $this->assertSame(['life-skills'], $idea->categories->pluck('slug')->all());
+        $this->assertCount(0, $idea->categories);
+        $this->assertSame('exams', Resource::with('category')->firstWhere('url', 'https://dorevision.com')->category->slug);
         $this->assertTrue($idea->ages->contains(AgeBand::Primary));
         $this->assertTrue($idea->spotlight);
         $this->assertNull($idea->region_id);

@@ -42,7 +42,10 @@
       @foreach ($groups as $group)
         <x-category-tiles :heading="$group['group']->heading()" :categories="$group['categories']" />
       @endforeach
-      @if ($emptyCategories->isNotEmpty())
+      @if ($groups->isEmpty())
+        {{-- Nothing sorted yet: naming all thirteen empty categories would read as a wall. --}}
+        <p class="section__empty">Nothing's been sorted into subjects yet. Everything so far is on <a href="{{ route('browse') }}">the full list</a>.</p>
+      @elseif ($emptyCategories->isNotEmpty())
         <p class="section__empty">Nothing under {{ $emptyCategories->pluck('name')->join(', ', ' or ') }} yet. They'll fill in as we find things worth listing.</p>
       @endif
     </section>

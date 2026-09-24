@@ -76,6 +76,15 @@ class HomePageTest extends TestCase
             ->assertSee('Nothing under Mixed subjects, English &amp; literacy', false);
     }
 
+    public function test_with_nothing_categorised_it_points_to_the_full_list_instead_of_naming_every_category(): void
+    {
+        Resource::factory()->create();   // no category: "global"
+
+        $this->get('/')
+            ->assertSee("Nothing's been sorted into subjects yet.", false)
+            ->assertDontSee('Nothing under');
+    }
+
     public function test_near_you_lists_only_regions_in_use(): void
     {
         Resource::factory()->near(Region::firstWhere('slug', 'south-west'), 'Bristol')->create();

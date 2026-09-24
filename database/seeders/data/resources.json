@@ -5,9 +5,6 @@
         "domain": "idea.org.uk",
         "tier": "free",
         "category": "computing-digital",
-        "also": [
-            "life-skills"
-        ],
         "region": null,
         "location": null,
         "ages": [
@@ -37,9 +34,6 @@
         "domain": "dorevision.com",
         "tier": "free",
         "category": "exams",
-        "also": [
-            "mixed-subjects"
-        ],
         "region": null,
         "location": null,
         "ages": [

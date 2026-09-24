@@ -1,0 +1,497 @@
+/* ==========================================================================
+   Home Ed Resource — design 2a
+   Tokens first, then layout. Rounded pills and thumbnails; nothing else is
+   rounded, and there are no shadows or gradients. That flatness is intentional.
+   ========================================================================== */
+
+/* --- Fonts (self-hosted; ranges mirror Google's own CSS) ------------------ */
+
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url('../fonts/bricolage-grotesque-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+                 U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF,
+                 U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url('../fonts/bricolage-grotesque-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+                 U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122,
+                 U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 300 600;
+  font-display: swap;
+  src: url('../fonts/karla-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+                 U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF,
+                 U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 300 600;
+  font-display: swap;
+  src: url('../fonts/karla-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+                 U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122,
+                 U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* --- Tokens --------------------------------------------------------------- */
+
+:root {
+  --ink:          #26211c;
+  --text:         #3a332c;
+  --text-soft:    #4a423a;
+  --muted:        #5c5349;  /* section asides */
+  --muted-2:      #6b6157;  /* checked line, footer */
+  --paper:        #fefbf6;
+  --paper-warm:   #fdf3e4;  /* header + two-up block */
+  --desk:         #e8e6e1;  /* behind the page column */
+  --rule:         #ece2d3;
+
+  --pill-meta-bg:  #f5ebda;
+  --pill-meta-fg:  #4a423a;
+  --pill-tag-bg:   #f0f3ec;
+  --pill-tag-fg:   #43503f;
+  --thumb-tile:    #f3ece1;
+
+  /* sRGB fallbacks; oklch originals restored under @supports below */
+  --accent-dot:     #c56a3e;
+  --accent-domain:  #a04f27;
+  --button:         #ddae6c;
+  --button-hover:   #cd9f5d;
+
+  --measure: 880px;
+  --gutter:   52px;
+
+  --display: 'Bricolage Grotesque', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --sans:    'Karla', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+@supports (color: oklch(0.62 0.13 45)) {
+  :root {
+    --accent-dot:    oklch(0.62 0.13 45);
+    --accent-domain: oklch(0.52 0.12 45);
+    --button:        oklch(0.78 0.1 75);
+    --button-hover:  oklch(0.73 0.1 75);
+  }
+}
+
+/* --- Base ----------------------------------------------------------------- */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--desk);
+  color: var(--ink);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, p { margin: 0; }
+a { color: inherit; }
+img { display: block; max-width: 100%; }
+
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.page {
+  max-width: var(--measure);
+  min-height: 100vh;
+  margin: 0 auto;
+  background: var(--paper);
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 10;
+  background: var(--paper);
+  color: var(--ink);
+  padding: 12px 20px;
+  font-size: 14px;
+  text-decoration: none;
+  border: 2px solid var(--ink);
+}
+.skip-link:focus { left: 0; }
+
+/* --- Header --------------------------------------------------------------- */
+
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  padding: 22px var(--gutter);
+  background: var(--paper-warm);
+  border-bottom: 2px solid var(--ink);
+}
+.masthead__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+.brand-dot {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--accent-dot);
+  flex: none;
+}
+.wordmark {
+  font-family: var(--display);
+  font-size: 23px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+.masthead nav {
+  display: flex;
+  gap: 24px;
+  font-size: 15px;
+}
+.masthead nav a {
+  color: var(--text-soft);
+  text-decoration: none;
+  transition: color 120ms ease;
+}
+.masthead nav a:hover { color: var(--ink); }
+
+/* --- Intro ---------------------------------------------------------------- */
+
+.intro {
+  padding: 52px var(--gutter) 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-bottom: 1px solid var(--rule);
+}
+.intro h1 {
+  font-family: var(--display);
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  max-width: 18ch;
+}
+.intro__lede {
+  font-size: 19.5px;
+  line-height: 1.6;
+  color: var(--text-soft);
+  max-width: 52ch;
+}
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 4px;
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+}
+.pill {
+  font-size: 14px;
+  padding: 7px 14px;
+  border-radius: 100px;
+  background: var(--pill-meta-bg);
+  color: var(--pill-meta-fg);
+}
+
+/* --- Section headings ----------------------------------------------------- */
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 40px var(--gutter) 8px;
+}
+.section-head--paid { padding-top: 30px; }
+.section-head h2 {
+  font-family: var(--display);
+  font-size: 29px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.section-head__aside {
+  font-size: 15.5px;
+  color: var(--muted);
+}
+
+/* --- Entries -------------------------------------------------------------- */
+
+.entries {
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--gutter) 8px;
+}
+.entry {
+  display: grid;
+  grid-template-columns: 1fr 268px;
+  gap: 32px;
+  align-items: start;
+  padding: 26px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.entry__main {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  min-width: 0;
+}
+.entry__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 20px;
+}
+.entry__title {
+  font-family: var(--display);
+  font-size: 27px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+.entry__title a {
+  color: var(--ink);
+  text-decoration: none;
+}
+.entry__title a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+.entry__checked {
+  font-size: 13.5px;
+  color: var(--muted-2);
+  white-space: nowrap;
+}
+.entry__description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text);
+  max-width: 44ch;
+}
+/* Longer synopsis under the description. Stepped down a size and set on a
+   wider measure so the entry reads as one block with a clear first paragraph
+   rather than a wall at 44ch. */
+.entry__more {
+  font-size: 16.5px;
+  line-height: 1.62;
+  color: var(--text-soft);
+  max-width: 56ch;
+  margin: 0;
+}
+.entry__more + .entry__more { margin-top: 9px; }
+
+.entry__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 2px;
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+}
+.tag {
+  font-size: 13.5px;
+  padding: 5px 12px;
+  border-radius: 100px;
+  background: var(--pill-tag-bg);
+  color: var(--pill-tag-fg);
+}
+.entry__domain {
+  font-size: 13.5px;
+  padding: 5px 0 5px 4px;
+  color: var(--accent-domain);
+}
+
+/* Thumbnail. Decorative — the title beside it is the real link. */
+.entry__thumb {
+  display: block;
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--thumb-tile);
+}
+.entry__thumb img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 266 / 140;
+  object-fit: cover;
+  border-radius: 13px;
+}
+/* Fallback when a resource has no stored screenshot. */
+.entry__thumb--empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 266 / 140;
+  border-radius: 13px;
+  padding: 0 14px;
+  text-align: center;
+  font-size: 13.5px;
+  color: var(--pill-tag-fg);
+  word-break: break-word;
+}
+
+.section__empty {
+  padding: 6px var(--gutter) 38px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-soft);
+  max-width: 54ch;
+}
+
+/* --- Two-up block --------------------------------------------------------- */
+
+.two-up {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 44px;
+  padding: 40px var(--gutter);
+  background: var(--paper-warm);
+  border-top: 1px solid var(--rule);
+}
+.two-up__col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.two-up__col h2 {
+  font-family: var(--display);
+  font-size: 23px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.two-up__col p {
+  font-size: 17px;
+  line-height: 1.62;
+  color: var(--text);
+}
+.button {
+  align-self: flex-start;
+  margin-top: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--ink);
+  background: var(--button);
+  padding: 11px 20px;
+  border-radius: 100px;
+  transition: background-color 120ms ease;
+}
+.button:hover { background: var(--button-hover); }
+
+/* Email is assembled at runtime; reversed in source for the no-JS case. */
+.email-reverse {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+
+/* --- Footer --------------------------------------------------------------- */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+  padding: 24px var(--gutter) 30px;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--muted-2);
+}
+.footer__disclaimer { max-width: 56ch; }
+.footer__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: right;
+  white-space: nowrap;
+}
+.footer__meta a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  transition: border-color 120ms ease;
+}
+.footer__meta a:hover { border-bottom-color: var(--ink); }
+
+/* --- Responsive ----------------------------------------------------------- */
+
+@media (max-width: 820px) {
+  .two-up { grid-template-columns: 1fr; gap: 32px; }
+}
+
+@media (max-width: 700px) {
+  :root { --gutter: 24px; }
+
+  /* Thumbnail first, full width, same ratio. */
+  .entry {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .entry__thumb { order: -1; width: 100%; }
+
+  .intro { padding-top: 40px; padding-bottom: 32px; }
+  .intro h1 { font-size: 38px; line-height: 1.15; }
+  .intro__lede { font-size: 18px; }
+
+  .footer { flex-direction: column; gap: 18px; }
+  .footer__meta { text-align: left; white-space: normal; }
+}
+
+@media (max-width: 640px) {
+  .entry__head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 560px) {
+  .masthead {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .masthead nav {
+    flex-wrap: wrap;
+    gap: 4px 20px;
+    margin-left: -10px;
+  }
+  /* Keep tap targets at 44px without changing the visual rhythm. */
+  .masthead nav a {
+    padding: 11px 10px;
+  }
+  .intro h1 { font-size: 34px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition-duration: 0.01ms !important; }
+}
+
+@media print {
+  body { background: #fff; }
+  .masthead nav, .skip-link { display: none; }
+  .page { max-width: none; }
+}

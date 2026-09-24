@@ -1,0 +1,42 @@
+[
+    {
+        "title": "iDEA",
+        "url": "https://idea.org.uk",
+        "domain": "idea.org.uk",
+        "tier": "free",
+        "description": "Little online modules about computers, money and work skills. You earn badges as you go, and they add up to a Bronze, Silver or Gold award. Handy if you like having something to show for the term.",
+        "more": [
+            "iDEA stands for the Inspiring Digital Enterprise Award, and it describes itself as the digital and enterprise equivalent of the Duke of Edinburgh's Award. The modules are short and interactive, written with industry people, and they cover three broad strands: the digital side, including coding; enterprise; and the employability bits like work skills and money. There is no set order to any of it, so you can follow whatever your child is interested in this week and still be earning towards the same award.",
+            "Bronze came first in 2017, Silver followed in 2018 and Gold in 2022. Every badge you finish adds points towards the next level up. The site reports more than 2.6 million people signed up, over 19 million badges completed and 243,000 awards won — their figures, not ours. You can download a portable Record of Achievement as you go, which is the useful part if you want something on paper for a portfolio, a college application or just the end of a term.",
+            "It runs in a browser on any device, anywhere you can get online, so there is nothing to install and nothing to keep updated. It is free the whole way through, with no trial period and no paid tier waiting further in."
+        ],
+        "tags": [
+            "Good from about 8",
+            "Do it in any order",
+            "Fine on a phone"
+        ],
+        "last_checked": "2026-09-18",
+        "image": "images/idea-org-uk.png",
+        "image_alt": "Free badging platform - iDEA"
+    },
+    {
+        "title": "Do Revision",
+        "url": "https://dorevision.com",
+        "domain": "dorevision.com",
+        "tier": "free",
+        "description": "Revision questions and a plan for what to do next. The plan is the bit we found useful — without a school timetable, someone has to decide what gets revised today, and this does it for you.",
+        "more": [
+            "It is built around GCSE specifications rather than subjects in general, which matters more than it sounds — the same subject is examined differently by different boards. Six are covered: AQA (37 subjects, 813 modules), Edexcel (37 subjects, 790 modules), OCR (32 subjects, 339 modules), CCEA (37 subjects, 253 modules), Eduqas (21 subjects, 130 modules) and WJEC (27 subjects, 89 modules). You choose the board once and the content follows it from there.",
+            "The work is broken into what they call revision sprints, around fifteen minutes each, mixing a little teaching with questions that are not all multiple choice: filling gaps, ordering steps, matching pairs, labelling diagrams, building sentences and annotating. Answers are checked on the server rather than sitting in the page, so they cannot be found by poking about in the source. On top of that there is XP, streaks, trophies and a leaderboard, which will either help or irritate depending entirely on the child.",
+            "Past papers are open without logging in. The revision modules and the progress tracking need an account, and that is still free — no card, no trial, no paywall further down. There are teacher-facing planning tools and printable sheets as well, and those are just as usable from a kitchen table as from a classroom."
+        ],
+        "tags": [
+            "Teens",
+            "GCSE",
+            "Free bit is usable"
+        ],
+        "last_checked": "2026-09-11",
+        "image": "images/dorevision-com.png",
+        "image_alt": "Free GCSE revision platform"
+    }
+]

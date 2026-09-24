@@ -1,0 +1,80 @@
+[
+    {
+        "slug": "mixed-subjects",
+        "name": "Mixed subjects",
+        "group": "subject",
+        "blurb": "Sites that cover a bit of everything, for when you want one place to start rather than twelve."
+    },
+    {
+        "slug": "maths",
+        "name": "Maths",
+        "group": "subject",
+        "blurb": "Number, times tables and the maths that turns up later in exams. Practice, explanations and the odd game."
+    },
+    {
+        "slug": "english-literacy",
+        "name": "English & literacy",
+        "group": "subject",
+        "blurb": "Reading, writing, phonics and spelling, from first sounds to essays."
+    },
+    {
+        "slug": "science-nature",
+        "name": "Science & nature",
+        "group": "subject",
+        "blurb": "Experiments, the natural world, and the science that ends up on an exam paper."
+    },
+    {
+        "slug": "computing-digital",
+        "name": "Computing & digital",
+        "group": "subject",
+        "blurb": "Coding, digital skills and staying safe online."
+    },
+    {
+        "slug": "history",
+        "name": "History",
+        "group": "subject",
+        "blurb": "People, places and what happened when, whether at the kitchen table or on a day out."
+    },
+    {
+        "slug": "geography",
+        "name": "Geography",
+        "group": "subject",
+        "blurb": "Maps, weather, countries and the world outside the front door."
+    },
+    {
+        "slug": "languages",
+        "name": "Languages",
+        "group": "subject",
+        "blurb": "Learning another language at home, including ones nobody in the house speaks yet."
+    },
+    {
+        "slug": "arts-music",
+        "name": "Arts & music",
+        "group": "subject",
+        "blurb": "Art, design, music and drama. For making things, not just reading about them."
+    },
+    {
+        "slug": "life-skills",
+        "name": "Life skills & wellbeing",
+        "group": "practical",
+        "blurb": "Money, cooking, careers and looking after yourself: the things a school timetable tends to squeeze out."
+    },
+    {
+        "slug": "exams",
+        "name": "Exams & qualifications",
+        "group": "practical",
+        "blurb": "Revision, sitting exams as a private candidate, and finding somewhere to sit them."
+    },
+    {
+        "slug": "groups-meetups",
+        "name": "Groups & meetups",
+        "group": "practical",
+        "blurb": "Places to meet other home ed families, online and in person."
+    },
+    {
+        "slug": "support-advice",
+        "name": "Support & advice",
+        "group": "practical",
+        "blurb": "Getting started, the law, the local authority and SEND. Help for the grown-ups."
+    }
+]

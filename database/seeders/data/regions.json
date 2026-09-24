@@ -1,0 +1,21 @@
+[
+    {
+        "slug": "england",
+        "name": "England",
+        "phrase": "England",
+        "regions": [
+            { "slug": "north-east", "name": "North East", "phrase": "the North East" },
+            { "slug": "north-west", "name": "North West", "phrase": "the North West" },
+            { "slug": "yorkshire-humber", "name": "Yorkshire and the Humber", "phrase": "Yorkshire and the Humber" },
+            { "slug": "east-midlands", "name": "East Midlands", "phrase": "the East Midlands" },
+            { "slug": "west-midlands", "name": "West Midlands", "phrase": "the West Midlands" },
+            { "slug": "east-of-england", "name": "East of England", "phrase": "the East of England" },
+            { "slug": "london", "name": "London", "phrase": "London" },
+            { "slug": "south-east", "name": "South East", "phrase": "the South East" },
+            { "slug": "south-west", "name": "South West", "phrase": "the South West" }
+        ]
+    },
+    { "slug": "scotland", "name": "Scotland", "phrase": "Scotland" },
+    { "slug": "wales", "name": "Wales", "phrase": "Wales" },
+    { "slug": "northern-ireland", "name": "Northern Ireland", "phrase": "Northern Ireland" }
+]

@@ -3,6 +3,7 @@
     'description' => config('site.meta_description'),
     'shareDescription' => config('site.share_description'),
     'canonical' => \App\Support\Directory::baseUrl(),
+    'indexable' => true,
 ])
 @php($base = \App\Support\Directory::baseUrl())
 <!DOCTYPE html>
@@ -16,7 +17,11 @@
 <link rel="canonical" href="{{ $canonical }}">
 <meta name="theme-color" content="#fdf3e4">
 <meta name="color-scheme" content="light">
+@if ($indexable)
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+@else
+<meta name="robots" content="noindex, follow">
+@endif
 
 <!-- Open Graph -->
 <meta property="og:site_name" content="{{ config('site.name') }}">
@@ -54,7 +59,7 @@
 </head>
 
 <body>
-<a class="skip-link" href="#free">Skip to the list</a>
+<a class="skip-link" href="#main">Skip to the content</a>
 
 <div class="page">
 
@@ -64,7 +69,7 @@
       <span class="wordmark">{{ config('site.name') }}</span>
     </a>
     <nav aria-label="Primary">
-      <a href="/#free">The list</a>
+      <a href="{{ route('browse') }}">The list</a>
       <a href="/#who">Who we are</a>
       <a href="/#suggest">Send us one</a>
     </nav>

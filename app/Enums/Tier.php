@@ -3,8 +3,8 @@
 namespace App\Enums;
 
 /**
- * The sections of the list, in display order. The copy for each (heading,
- * aside, empty-state text) lives in config/site.php under `tiers`.
+ * Cost. A filter on the list and a label on each entry. The copy for each
+ * lives in config/site.php under `tiers`.
  */
 enum Tier: string
 {
@@ -14,11 +14,6 @@ enum Tier: string
     public function label(): string
     {
         return config("site.tiers.{$this->value}.label");
-    }
-
-    public function aside(): string
-    {
-        return config("site.tiers.{$this->value}.aside");
     }
 
     public function emptyText(): string

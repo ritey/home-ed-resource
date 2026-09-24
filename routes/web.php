@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BrowseController;
 use App\Http\Controllers\DiscoveryController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
@@ -22,6 +23,12 @@ Route::withoutMiddleware([
     PreventRequestForgery::class,
 ])->group(function () {
     Route::get('/', HomeController::class)->name('home');
+
+    Route::get('/resources', [BrowseController::class, 'index'])->name('browse');
+    // Before {category}, so "near" is never read as a category slug.
+    Route::get('/resources/near/{region:slug}', [BrowseController::class, 'region'])->name('browse.region');
+    Route::get('/resources/{category:slug}', [BrowseController::class, 'category'])->name('browse.category');
+
     Route::get('/llms.txt', [DiscoveryController::class, 'llms'])->name('llms');
     Route::get('/sitemap.xml', [DiscoveryController::class, 'sitemap'])->name('sitemap');
     Route::get('/robots.txt', [DiscoveryController::class, 'robots'])->name('robots');

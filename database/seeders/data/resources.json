@@ -4,6 +4,18 @@
         "url": "https://idea.org.uk",
         "domain": "idea.org.uk",
         "tier": "free",
+        "category": "computing-digital",
+        "also": [
+            "life-skills"
+        ],
+        "region": null,
+        "location": null,
+        "ages": [
+            "primary",
+            "secondary",
+            "16-plus"
+        ],
+        "spotlight": true,
         "description": "Little online modules about computers, money and work skills. You earn badges as you go, and they add up to a Bronze, Silver or Gold award. Handy if you like having something to show for the term.",
         "more": [
             "iDEA stands for the Inspiring Digital Enterprise Award, and it describes itself as the digital and enterprise equivalent of the Duke of Edinburgh's Award. The modules are short and interactive, written with industry people, and they cover three broad strands: the digital side, including coding; enterprise; and the employability bits like work skills and money. There is no set order to any of it, so you can follow whatever your child is interested in this week and still be earning towards the same award.",
@@ -24,6 +36,16 @@
         "url": "https://dorevision.com",
         "domain": "dorevision.com",
         "tier": "free",
+        "category": "exams",
+        "also": [
+            "mixed-subjects"
+        ],
+        "region": null,
+        "location": null,
+        "ages": [
+            "secondary"
+        ],
+        "spotlight": true,
         "description": "Revision questions and a plan for what to do next. The plan is the bit we found useful — without a school timetable, someone has to decide what gets revised today, and this does it for you.",
         "more": [
             "It is built around GCSE specifications rather than subjects in general, which matters more than it sounds — the same subject is examined differently by different boards. Six are covered: AQA (37 subjects, 813 modules), Edexcel (37 subjects, 790 modules), OCR (32 subjects, 339 modules), CCEA (37 subjects, 253 modules), Eduqas (21 subjects, 130 modules) and WJEC (27 subjects, 89 modules). You choose the board once and the content follows it from there.",

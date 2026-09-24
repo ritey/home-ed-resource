@@ -10,24 +10,27 @@ left up.
 
 Region: United Kingdom
 Contact: via {!! $base !!}#suggest
+Search: {!! $base !!}resources?q={query} (also filters: category, age, cost, where)
 Entries: {!! $total !!}
 @if ($updated)
 Last updated: {!! $updated->toDateString() !!}
 @endif
 
-@foreach ($tiers as $section)
-## {!! $section['tier']->label() !!} — {!! $section['tier']->aside() !!}
+@foreach ($sections as $section)
+## {!! $section['heading'] !!}
 
-@forelse ($section['resources'] as $r)
-- [{!! $r->title !!}]({!! $r->url !!}): {!! $r->description !!} ({!! implode(' · ', $r->tags) !!}. Last checked {!! $r->last_checked->toDateString() !!}.)
+@if ($section['blurb'])
+{!! $section['blurb'] !!} All of them: {!! $section['url'] !!}
+
+@endif
+@foreach ($section['resources'] as $r)
+- [{!! $r->title !!}]({!! $r->url !!}): {!! $r->description !!} ({!! collect([$r->tier->label(), $r->ageSpan(), $r->place() ?? 'Online or UK-wide', ...$r->tags])->filter()->join(' · ') !!}. Last checked {!! $r->last_checked->toDateString() !!}.)
 @foreach ($r->more ?? [] as $paragraph)
   {!! $paragraph !!}
 @endforeach
-@empty
-- {!! $section['tier']->emptyText() !!}
-@endforelse
+@endforeach
 
 @endforeach
 ## Optional
 
-- [Full list]({!! $base !!}): every entry with its last-checked date.
+- [Full list]({!! $base !!}resources): every entry, searchable, with its last-checked date.

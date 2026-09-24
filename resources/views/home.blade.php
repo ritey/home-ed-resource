@@ -5,24 +5,63 @@
 </script>
   </x-slot:head>
 
-  <main>
+  <main id="main">
 
     <div class="intro">
       <h1>Home Education Resources UK – Free &amp; Paid Resources</h1>
-      <p class="intro__lede">We're a home ed family in the UK, and we kept forgetting which websites were any good. So we started writing them down. Here's the list - free things first, paid things underneath, with a note on who each one suited us for.</p>
+      <p class="intro__lede">We're a home ed family in the UK, and we kept forgetting which websites were any good. So we started writing them down. Here's the list - sorted by subject, with a note on who each one suited us for.</p>
       <ul class="pills">
         {{-- The first two are derived from the data, per the handoff. --}}
-        <li class="pill">{{ $directory->resources->count() }} {{ Str::plural('thing', $directory->resources->count()) }} so far</li>
+        <li class="pill">{{ $total }} {{ Str::plural('thing', $total) }} so far</li>
         @if ($updated)
           <li class="pill">Updated {{ $updated->format('j F') }}</li>
         @endif
         <li class="pill">{{ config('site.standing_pill') }}</li>
       </ul>
+      <x-search />
     </div>
 
-    @foreach ($tiers as $section)
-      <x-tier-section :tier="$section['tier']" :resources="$section['resources']" />
-    @endforeach
+    <section aria-labelledby="spotlight-heading" id="spotlight">
+      <div class="section-head">
+        <h2 id="spotlight-heading">Worth a look</h2>
+        <span class="section-head__aside">- a few we keep coming back to</span>
+      </div>
+      <div class="entries">
+        @foreach ($spotlight as $resource)
+          <x-entry :resource="$resource" />
+        @endforeach
+      </div>
+      <p class="section__more"><a href="{{ route('browse') }}">See all {{ $total }} on the full list</a></p>
+    </section>
+
+    <section aria-labelledby="browse-heading" id="browse">
+      <div class="section-head">
+        <h2 id="browse-heading">Find something</h2>
+        <span class="section-head__aside">- by subject, or by what you're trying to sort out</span>
+      </div>
+      @foreach ($groups as $group)
+        <x-category-tiles :heading="$group['group']->heading()" :categories="$group['categories']" />
+      @endforeach
+      @if ($emptyCategories->isNotEmpty())
+        <p class="section__empty">Nothing under {{ $emptyCategories->pluck('name')->join(', ', ' or ') }} yet. They'll fill in as we find things worth listing.</p>
+      @endif
+    </section>
+
+    <section aria-labelledby="near-heading" id="near">
+      <div class="section-head">
+        <h2 id="near-heading">Near you</h2>
+        <span class="section-head__aside">- groups, places and exam centres by region</span>
+      </div>
+      @if ($regions->isNotEmpty())
+        <ul class="pills pills--links">
+          @foreach ($regions as $region)
+            <li><a class="pill" href="{{ route('browse.region', $region) }}">{{ $region->name }} <span class="pill__count">{{ $region->resources_count }}</span></a></li>
+          @endforeach
+        </ul>
+      @else
+        <p class="section__empty">Everything on the list so far works from anywhere. If there's a group, a place or an exam centre near you that's worth knowing about, <a href="#suggest">tell us</a>.</p>
+      @endif
+    </section>
 
   </main>
 
@@ -39,11 +78,5 @@
     </div>
   </div>
 
-  <footer class="footer">
-    <p class="footer__disclaimer">These are other people's websites, so do have a look yourself before you rely on one - us listing it isn't a promise or guarantee it's great for everyone.</p>
-    <div class="footer__meta">
-      <span>Want an email when we add something? <a href="#suggest">Yes please</a></span>
-      <span>&copy; {{ ($updated ?? now())->year }} {{ config('site.name') }}</span>
-    </div>
-  </footer>
+  <x-footer :year="($updated ?? now())->year" />
 </x-layouts.site>

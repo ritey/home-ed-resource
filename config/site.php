@@ -39,12 +39,10 @@ return [
     'tiers' => [
         'free' => [
             'label' => 'Free',
-            'aside' => 'genuinely free, not a trial that turns into a bill',
             'empty' => 'Nothing free on the list at the moment.',
         ],
         'paid' => [
             'label' => 'Paid',
-            'aside' => "nothing here yet, and that's on purpose",
             'empty' => "We're trying a couple of paid things at the moment. We'd rather use them for a term before telling you to spend money on them, so this bit stays empty for now.",
         ],
     ],

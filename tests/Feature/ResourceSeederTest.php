@@ -26,7 +26,10 @@ class ResourceSeederTest extends TestCase
 
         $this->assertSame(13, Category::count());
         $this->assertSame(13, Region::count());
-        $this->assertSame(['iDEA', 'Do Revision'], Resource::ordered()->pluck('title')->all());
+        $titles = Resource::ordered()->pluck('title');
+        $this->assertSame(['iDEA', 'Do Revision'], $titles->take(2)->all());   // file order
+        $this->assertSame($titles->count(), $titles->unique()->count());       // no duplicates on re-run
+        $this->assertSame(count(json_decode(file_get_contents(database_path('seeders/data/resources.json')))), $titles->count());
 
         $idea = Resource::with('category', 'categories')->firstWhere('url', 'https://idea.org.uk');
         $this->assertSame(Tier::Free, $idea->tier);

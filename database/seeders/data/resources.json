@@ -54,5 +54,788 @@
         "last_checked": "2026-09-11",
         "image": "images/dorevision-com.png",
         "image_alt": "Free GCSE revision platform"
+    },
+    {
+        "title": "Oak National Academy",
+        "url": "https://www.thenational.academy/pupils",
+        "domain": "thenational.academy",
+        "tier": "free",
+        "category": "mixed-subjects",
+        "region": null,
+        "location": null,
+        "ages": [
+            "primary",
+            "secondary"
+        ],
+        "spotlight": false,
+        "description": "Free video lessons for every year from Year 1 to Year 11, sorted by year group so you can pick up wherever your child is. Useful when you want someone else to do the explaining for a bit.",
+        "more": [
+            "Oak is the national curriculum body for England, and it says it's now used in 72% of schools. The pupil side is the bit for home: choose a year, then a subject, and work through lessons that follow the national curriculum. It's free, and you don't need an account to watch."
+        ],
+        "tags": [
+            "Year 1 to Year 11",
+            "No account needed",
+            "Follows the national curriculum"
+        ],
+        "last_checked": "2026-09-24",
+        "image": "images/thenational-academy.png"
+    },
+    {
+        "title": "BBC Bitesize",
+        "url": "https://www.bbc.co.uk/bitesize",
+        "domain": "bbc.co.uk/bitesize",
+        "tier": "free",
+        "category": "mixed-subjects",
+        "also": [
+            "exams"
+        ],
+        "region": null,
+        "location": null,
+        "ages": [
+            "early-years",
+            "primary",
+            "secondary"
+        ],
+        "spotlight": false,
+        "description": "Short videos, guides, quizzes and games for nearly every subject, from age 3 up to GCSE. The one most people already know, and still a good first stop for a topic you're both rusty on.",
+        "more": [
+            "It's split into Primary (ages 3 to 11) and Secondary (11 to 16), then by subject and topic, with step-by-step guides, videos, quizzes and games throughout. There's a Careers section for older ones too. All free, from the BBC."
+        ],
+        "tags": [
+            "Ages 3 to 16",
+            "Every subject",
+            "Games as well as guides"
+        ],
+        "last_checked": "2026-09-24",
+        "image": "images/bbc-co-uk-bitesize.png"
+    },
+    {
+        "title": "Khan Academy",
+        "url": "https://www.khanacademy.org/",
+        "domain": "khanacademy.org",
+        "tier": "free",
+        "category": "mixed-subjects",
+        "also": [
+            "maths"
+        ],
+        "region": null,
+        "location": null,
+        "ages": [
+            "primary",
+            "secondary",
+            "16-plus"
+        ],
+        "spotlight": false,
+        "description": "Free lessons and practice in maths, science, computing, history, economics and more. Best known for maths, where it walks through a topic step by step and then gives you questions until it sticks.",
+        "more": [
+            "Khan Academy is a non-profit and everything on it is free; it runs on donations. It's American, so the maths courses follow US grades rather than UK years, but the skills are the same and you can jump straight to a topic. Families can set up free accounts to follow a child's progress."
+        ],
+        "tags": [
+            "Self-paced",
+            "US grades, same maths",
+            "Free parent accounts"
+        ],
+        "last_checked": "2026-09-24",
+        "image": "images/khanacademy-org.png"
+    },
+    {
+        "title": "Corbettmaths",
+        "url": "https://corbettmaths.com/",
+        "domain": "corbettmaths.com",
+        "tier": "free",
+        "category": "maths",
+        "also": [
+            "exams"
+        ],
+        "region": null,
+        "location": null,
+        "ages": [
+            "primary",
+            "secondary"
+        ],
+        "spotlight": false,
+        "description": "Thousands of free maths videos and worksheets, plus the 5-a-day: five short questions a day to keep things ticking over. Popular for GCSE, with primary resources too.",
+        "more": [
+            "Everything is organised by topic, each with a video, practice questions and answers, and there are GCSE revision cards, 5-a-day workbooks and primary study cards on top. The site is free and carries adverts; some of the cards and workbooks are also sold in print."
+        ],
+        "tags": [
+            "GCSE and primary",
+            "5-a-day habit",
+            "Free"
+        ],
+        "last_checked": "2026-09-24",
+        "image": "images/corbettmaths-com.png"
+    },
+    {
+        "title": "Maths Genie",
+        "url": "https://www.mathsgenie.co.uk/",
+        "domain": "mathsgenie.co.uk",
+        "tier": "free",
+        "category": "maths",
+        "also": [
+            "exams"
+        ],
+        "region": null,
+        "location": null,
+        "ages": [
+            "secondary",
+            "16-plus"
+        ],
+        "spotlight": false,
+        "description": "Free GCSE and A-level maths revision: a video and worksheet for every topic, sorted by grade, plus past papers and mark schemes. Handy for working out which grade a topic sits at.",
+        "more": [
+            "Topics run from Grade 1 up to Grade 8/9, so it's easy to see what to tackle next. It can now mark exam-style answers for you, handwritten working included, and has a predicted-grade calculator. The site says more than a million students and teachers use it."
+        ],
+        "tags": [
+            "GCSE and A-level",
+            "Sorted by grade",
+            "Past papers included"
+        ],
+        "last_checked": "2026-09-24",
+        "image": "images/mathsgenie-co-uk.png"
+    },
+    {
+        "title": "Math Antics",
+        "url": "https://mathantics.com/",
+        "domain": "mathantics.com",
+        "tier": "free",
+        "category": "maths",
+        "region": null,
+        "location": null,
+        "ages": [
+            "primary",
+            "secondary"
+        ],
+        "spotlight": false,
+        "description": "Short, clear videos on the basics: place value, long division, fractions, percentages, geometry and the like. Good for the moment a method just isn't clicking and a different explanation might.",
+        "more": [
+            "It's American, so it says 'math', but the arithmetic is the same. Videos are grouped from numeracy and arithmetic through fractions, ratios and geometry, with worksheets alongside."
+        ],
+        "tags": [
+            "Primary and early secondary",
+            "Short videos",
+            "American, but it's still maths"
+        ],
+        "last_checked": "2026-09-24",
+        "image": "images/mathantics-com.png"
+    },
+    {
+        "title": "Teach Your Monster to Read",
+        "url": "https://www.teachyourmonster.org/teachyourmonstertoread",
+        "domain": "teachyourmonster.org",
+        "tier": "free",
+        "category": "english-literacy",
+        "region": null,
+        "location": null,
+        "ages": [
+            "early-years",
+            "primary"
+        ],
+        "spotlight": false,
+        "description": "A phonics game where your child makes a monster and teaches it to read, from first letters and sounds up to whole sentences. Free on a computer.",
+        "more": [
+            "It was made with literacy experts and comes in three stages: First Steps, Fun with Words and Champion Reader. The browser version is completely free; the phone and tablet apps cost a little. You can follow progress from an adult account."
+        ],
+        "tags": [
+            "Early readers",
+            "Free on a computer",
+            "Phonics"
+        ],
+        "last_checked": "2026-09-24",
+        "image": "images/teachyourmonster-org.png"
+    },
+    {
+        "title": "Night Zookeeper",
+        "url": "https://www.nightzookeeper.com/",
+        "domain": "nightzookeeper.com",
+        "tier": "paid",
+        "category": "english-literacy",
+        "region": null,
+        "location": null,
+        "ages": [
+            "primary"
+        ],
+        "spotlight": false,
+        "description": "A reading and writing programme wrapped in a story: children invent characters and write their way through adventures to save the Night Zoo. Suits a child who'll write for a plot.",
+        "more": [
+            "It's for ages 6 to 12 and covers spelling, punctuation, grammar and vocabulary through games and writing challenges. It's a paid subscription. There are free reading and writing worksheets on the site too, and a book series if the story catches on."
+        ],
+        "tags": [
+            "Ages 6 to 12",
+            "Writing, not just reading",
+            "Paid subscription"
+        ],
+        "last_checked": "2026-09-24",
+        "image": "images/nightzookeeper-com.png"
+    },
+    {
+        "title": "Explorify",
+        "url": "https://explorify.uk/",
+        "domain": "explorify.uk",
+        "tier": "free",
+        "category": "science-nature",
+        "region": null,
+        "location": null,
+        "ages": [
+            "primary"
+        ],
+        "spotlight": false,
+        "description": "Short science activities built around a picture, a video or a question, designed to get children talking and thinking like scientists. Low prep, which is the point.",
+        "more": [
+            "It's made for primary classrooms (the site says over 75% of UK primary schools use it), but the activities work just as well round a table at home. It's completely free; you sign up with an email to use it."
+        ],
+        "tags": [
+            "Primary",
+            "Low prep",
+            "Free sign-up"
+        ],
+        "last_checked": "2026-09-24",
+        "image": "images/explorify-uk.png"
+    },
+    {
+        "title": "Science Sparks",
+        "url": "https://www.science-sparks.com/",
+        "domain": "science-sparks.com",
+        "tier": "free",
+        "category": "science-nature",
+        "region": null,
+        "location": null,
+        "ages": [
+            "early-years",
+            "primary"
+        ],
+        "spotlight": false,
+        "description": "Hundreds of easy, hands-on science experiments, most using things you'll already have in the house, each with the science explained. Handy for a rainy afternoon.",
+        "more": [
+            "Experiments are sorted into biology, chemistry, physics and preschool science, with STEM challenges, science facts and free printables as well. The site is free and carries adverts."
+        ],
+        "tags": [
+            "Preschool and primary",
+            "Hands-on",
+            "Free printables"
+        ],
+        "last_checked": "2026-09-24",
+        "image": "images/science-sparks-com.png"
+    },
+    {
+        "title": "Scratch",
+        "url": "https://scratch.mit.edu/",
+        "domain": "scratch.mit.edu",
+        "tier": "free",
+        "category": "computing-digital",
+        "region": null,
+        "location": null,
+        "ages": [
+            "primary",
+            "secondary"
+        ],
+        "spotlight": false,
+        "description": "Drag-and-drop coding for making games, stories and animations, then sharing them with other Scratch users. Many people's first go at programming.",
+        "more": [
+            "It's free and run by a non-profit that grew out of MIT. You can start creating in the browser straight away, or make an account to save and share projects. Shared projects are public, so it's worth looking at the community side together first."
+        ],
+        "tags": [
+            "Good from about 8",
+            "Runs in a browser",
+            "Free"
+        ],
+        "last_checked": "2026-09-24",
+        "image": "images/scratch-mit-edu.png"
+    },
+    {
+        "title": "TypingClub",
+        "url": "https://www.typingclub.com/",
+        "domain": "typingclub.com",
+        "tier": "free",
+        "category": "computing-digital",
+        "also": [
+            "life-skills"
+        ],
+        "region": null,
+        "location": null,
+        "ages": [
+            "primary",
+            "secondary",
+            "16-plus"
+        ],
+        "spotlight": false,
+        "description": "Touch typing, one short lesson at a time, repeated until you get five stars. The site reckons a few minutes a day for a week or two will do it.",
+        "more": [
+            "It's web-based and free for individuals, with an optional paid edition for schools. You don't need an account, though making one saves your progress. There are more than 650 typing games, tests and videos, plus courses for other keyboard layouts and languages."
+        ],
+        "tags": [
+            "No account needed",
+            "A few minutes a day",
+            "Free"
+        ],
+        "last_checked": "2026-09-24",
+        "image": "images/typingclub-com.png"
+    },
+    {
+        "title": "Big History Project",
+        "url": "https://www.bighistoryproject.com/",
+        "domain": "bighistoryproject.com",
+        "tier": "free",
+        "category": "history",
+        "also": [
+            "science-nature"
+        ],
+        "region": null,
+        "location": null,
+        "ages": [
+            "secondary",
+            "16-plus"
+        ],
+        "spotlight": false,
+        "description": "A free, self-guided course through 13.8 billion years, from the Big Bang to now. History and science as one story, for a child who likes the big picture.",
+        "more": [
+            "It moves through the universe, the solar system and Earth, life on Earth, humanity and the modern world, with videos and articles along the way. It's written for lifelong learners; there's a separate classroom version, OER Project, for younger secondary students."
+        ],
+        "tags": [
+            "Self-guided",
+            "History and science",
+            "Free"
+        ],
+        "last_checked": "2026-09-24",
+        "image": "images/bighistoryproject-com.png"
+    },
+    {
+        "title": "English Heritage teaching resources",
+        "url": "https://www.english-heritage.org.uk/learn/teaching-resources/",
+        "domain": "english-heritage.org.uk",
+        "tier": "free",
+        "category": "history",
+        "region": null,
+        "location": null,
+        "ages": [
+            "primary",
+            "secondary"
+        ],
+        "spotlight": false,
+        "description": "Free history resources from the people who look after Stonehenge, Dover Castle and hundreds of other places, sorted by period. Good before, or after, a day out.",
+        "more": [
+            "The resources library runs from prehistory through the Romans, Anglo-Saxons and Normans, medieval, Tudors and Stuarts, and Victorians to the 20th century, with teachers' kits for individual sites. There's a section for booking educational visits if you're planning a trip."
+        ],
+        "tags": [
+            "Sorted by period",
+            "Pairs with a day out",
+            "Free"
+        ],
+        "last_checked": "2026-09-24",
+        "image": "images/english-heritage-org-uk.png"
+    },
+    {
+        "title": "School History",
+        "url": "https://schoolhistory.co.uk/",
+        "domain": "schoolhistory.co.uk",
+        "tier": "paid",
+        "category": "history",
+        "also": [
+            "exams"
+        ],
+        "region": null,
+        "location": null,
+        "ages": [
+            "secondary",
+            "16-plus"
+        ],
+        "spotlight": false,
+        "description": "A big library of history lessons, worksheets and games for KS3, GCSE and A-level, organised by topic and by exam board. Written for teachers, which makes it a solid backbone if you're the one teaching history.",
+        "more": [
+            "It's been going since 1999 and matches the main GCSE and IGCSE boards (AQA, Edexcel, OCR, CIE, WJEC and Eduqas), with Scottish (SQA) history too. It's a paid subscription, from £10 a month."
+        ],
+        "tags": [
+            "KS3 to A-level",
+            "By exam board",
+            "£10 a month"
+        ],
+        "last_checked": "2026-09-24",
+        "image": "images/schoolhistory-co-uk.png"
+    },
+    {
+        "title": "Seterra",
+        "url": "https://www.geoguessr.com/seterra",
+        "domain": "geoguessr.com/seterra",
+        "tier": "free",
+        "category": "geography",
+        "region": null,
+        "location": null,
+        "ages": [
+            "primary",
+            "secondary",
+            "16-plus"
+        ],
+        "spotlight": false,
+        "description": "Map quizzes: countries, capitals, flags, rivers and mountains. Pick a continent and go. Oddly addictive, and a quick way to learn where things are.",
+        "more": [
+            "There are more than 400 quizzes, which you can customise, in over 40 languages. It's been around since 1997 and is now part of GeoGuessr. The quizzes are free to play."
+        ],
+        "tags": [
+            "Five-minute games",
+            "Countries, capitals, flags",
+            "Free"
+        ],
+        "last_checked": "2026-09-24",
+        "image": "images/geoguessr-com-seterra.png"
+    },
+    {
+        "title": "OS MapZone",
+        "url": "https://www.ordnancesurvey.co.uk/mapzone",
+        "domain": "ordnancesurvey.co.uk",
+        "tier": "free",
+        "category": "geography",
+        "region": null,
+        "location": null,
+        "ages": [
+            "primary"
+        ],
+        "spotlight": false,
+        "description": "Ordnance Survey's site for children: map skills, grid references, symbols, quizzes and games. Worth a look before a walk with a paper map.",
+        "more": [
+            "It's split into map skills, geography, 'did you know?', games, map quizzes and a GIS zone for older children. It's free, in English or Welsh."
+        ],
+        "tags": [
+            "Primary",
+            "Map skills",
+            "English or Welsh"
+        ],
+        "last_checked": "2026-09-24",
+        "image": "images/ordnancesurvey-co-uk.png"
+    },
+    {
+        "title": "Time for Geography",
+        "url": "https://timeforgeography.co.uk/",
+        "domain": "timeforgeography.co.uk",
+        "tier": "free",
+        "category": "geography",
+        "also": [
+            "exams"
+        ],
+        "region": null,
+        "location": null,
+        "ages": [
+            "secondary",
+            "16-plus"
+        ],
+        "spotlight": false,
+        "description": "Free, open-access geography videos for secondary students, linked to GCSE, IGCSE, A-level, National 5 and Higher. Useful alongside whatever course you're following.",
+        "more": [
+            "It describes itself as a video platform connecting geography education and careers, and lists university open days for older students thinking about what comes next."
+        ],
+        "tags": [
+            "Secondary and A-level",
+            "Videos",
+            "Free"
+        ],
+        "last_checked": "2026-09-24",
+        "image": "images/timeforgeography-co-uk.png"
+    },
+    {
+        "title": "Duolingo",
+        "url": "https://www.duolingo.com/",
+        "domain": "duolingo.com",
+        "tier": "free",
+        "category": "languages",
+        "region": null,
+        "location": null,
+        "ages": [
+            "primary",
+            "secondary",
+            "16-plus"
+        ],
+        "spotlight": false,
+        "description": "Bite-sized language lessons that play like a game, with streaks and points to keep you coming back. Good for building a daily habit.",
+        "more": [
+            "Dozens of languages, plus maths, music and chess. The core courses are free with adverts; the paid subscription removes them and adds extras, with a free week to try it. It's built for the app, though it works in a browser too."
+        ],
+        "tags": [
+            "Daily habit",
+            "Free with adverts",
+            "Phone or computer"
+        ],
+        "last_checked": "2026-09-24",
+        "image": "images/duolingo-com.png"
+    },
+    {
+        "title": "British Sign",
+        "url": "https://www.british-sign.co.uk/",
+        "domain": "british-sign.co.uk",
+        "tier": "free",
+        "category": "languages",
+        "region": null,
+        "location": null,
+        "ages": [
+            "primary",
+            "secondary",
+            "16-plus"
+        ],
+        "spotlight": false,
+        "description": "Free British Sign Language resources: an A to Z dictionary with videos, a fingerspelling player, quizzes and printable charts. Something the whole family can learn together.",
+        "more": [
+            "All of that is free. There's also a paid, CPD-certified online course (ten self-study sections, about 20 hours) if you want to go further."
+        ],
+        "tags": [
+            "Whole family",
+            "Free resources",
+            "Paid course optional"
+        ],
+        "last_checked": "2026-09-24",
+        "image": "images/british-sign-co-uk.png"
+    },
+    {
+        "title": "Tate Kids",
+        "url": "https://www.tate.org.uk/kids",
+        "domain": "tate.org.uk/kids",
+        "tier": "free",
+        "category": "arts-music",
+        "region": null,
+        "location": null,
+        "ages": [
+            "primary"
+        ],
+        "spotlight": false,
+        "description": "Tate's site for children: art games and quizzes, things to make, videos about artists, and a gallery where children can share their own work.",
+        "more": [
+            "It's free. Children can make pictures with Tate Paint and send their art in to be shown on the site, so it's worth setting that up together."
+        ],
+        "tags": [
+            "Primary",
+            "Make and share",
+            "Free"
+        ],
+        "last_checked": "2026-09-24",
+        "image": "images/tate-org-uk-kids.png"
+    },
+    {
+        "title": "Art UK",
+        "url": "https://artuk.org/",
+        "domain": "artuk.org",
+        "tier": "free",
+        "category": "arts-music",
+        "also": [
+            "history"
+        ],
+        "region": null,
+        "location": null,
+        "ages": [
+            "primary",
+            "secondary",
+            "16-plus"
+        ],
+        "spotlight": false,
+        "description": "The UK's public art collections in one place: around a million artworks you can search by artist, place or subject. Handy for finding what's hanging in a museum near you.",
+        "more": [
+            "It covers more than 75,000 artists and 3,500 venues, free to explore, with a Learn section and listings of what's on in UK museums and galleries."
+        ],
+        "tags": [
+            "All ages",
+            "Find art near you",
+            "Free"
+        ],
+        "last_checked": "2026-09-24",
+        "image": "images/artuk-org.png"
+    },
+    {
+        "title": "Making Music Fun",
+        "url": "https://makingmusicfun.net/",
+        "domain": "makingmusicfun.net",
+        "tier": "free",
+        "category": "arts-music",
+        "region": null,
+        "location": null,
+        "ages": [
+            "primary"
+        ],
+        "spotlight": false,
+        "description": "Easy sheet music, music theory worksheets and a free composing app for younger children. Handy if you're starting piano at home.",
+        "more": [
+            "It's American and aimed at primary-age children. The Composing with Kids app is free with no download, and the Piano Academy's 100-plus video lessons are free to watch. Unlimited printables cost $36 a year, but plenty is free without it."
+        ],
+        "tags": [
+            "Primary",
+            "Piano and theory",
+            "Free bit is usable"
+        ],
+        "last_checked": "2026-09-24",
+        "image": "images/makingmusicfun-net.png"
+    },
+    {
+        "title": "Barclays LifeSkills",
+        "url": "https://barclayslifeskills.com/",
+        "domain": "barclayslifeskills.com",
+        "tier": "free",
+        "category": "life-skills",
+        "region": null,
+        "location": null,
+        "ages": [
+            "secondary",
+            "16-plus"
+        ],
+        "spotlight": false,
+        "description": "Free lessons, activities and tools to help young people get ready for work, from Barclays.",
+        "more": [
+            "There are separate routes for young people, educators and families, and it runs a national skills competition for 11 to 25-year-olds."
+        ],
+        "tags": [
+            "Teens and up",
+            "Getting ready for work",
+            "Free"
+        ],
+        "last_checked": "2026-09-24",
+        "image": "images/barclayslifeskills-com.png"
+    },
+    {
+        "title": "NatWest Thrive",
+        "url": "https://natwestthrive.com/",
+        "domain": "natwestthrive.com",
+        "tier": "free",
+        "category": "life-skills",
+        "region": null,
+        "location": null,
+        "ages": [
+            "primary",
+            "secondary"
+        ],
+        "spotlight": false,
+        "description": "Free money and future-skills resources for parents and teachers, sorted by age and topic: earning, enterprise, careers and spotting scams.",
+        "more": [
+            "There's a free digital escape room called Unlocked that teaches young people to recognise and deal with fraud and scams, and careers activities with Team GB and ParalympicsGB athletes. You register for free to use it."
+        ],
+        "tags": [
+            "Sorted by age",
+            "Money and careers",
+            "Free"
+        ],
+        "last_checked": "2026-09-24",
+        "image": "images/natwestthrive-com.png"
+    },
+    {
+        "title": "Money Heroes",
+        "url": "https://moneyheroes.org.uk/",
+        "domain": "moneyheroes.org.uk",
+        "tier": "free",
+        "category": "life-skills",
+        "region": null,
+        "location": null,
+        "ages": [
+            "early-years",
+            "primary"
+        ],
+        "spotlight": false,
+        "description": "Free money lessons for ages 3 to 11 from the charity Young Enterprise, with storybooks and games starring Ed and Bunny. A gentle start on how money works, including the invisible kind.",
+        "more": [
+            "There are home activities as well as school ones, free storybooks and eBooks, a digital game, and Welsh-language versions. You sign up for free to download."
+        ],
+        "tags": [
+            "Ages 3 to 11",
+            "Stories and games",
+            "Free"
+        ],
+        "last_checked": "2026-09-24",
+        "image": "images/moneyheroes-org-uk.png"
+    },
+    {
+        "title": "HE Exams Wiki",
+        "url": "https://he-exams.fandom.com/wiki/HE_Exams_Wiki",
+        "domain": "he-exams.fandom.com",
+        "tier": "free",
+        "category": "exams",
+        "also": [
+            "support-advice"
+        ],
+        "region": null,
+        "location": null,
+        "ages": [
+            "secondary",
+            "16-plus"
+        ],
+        "spotlight": false,
+        "description": "Written by home educators for home educators: everything about sitting exams outside school, from finding an exam centre to choosing a board. The place to start if exams are on the horizon.",
+        "more": [
+            "It covers getting started, arranging and sitting exams as a private candidate, studying, alternative qualifications and post-16 options. It's a free wiki hosted on Fandom, so there are adverts."
+        ],
+        "tags": [
+            "Private candidates",
+            "By home educators",
+            "Free"
+        ],
+        "last_checked": "2026-09-24",
+        "image": "images/he-exams-fandom-com.png"
+    },
+    {
+        "title": "Cognito",
+        "url": "https://cognitoedu.org/home",
+        "domain": "cognitoedu.org",
+        "tier": "free",
+        "category": "exams",
+        "also": [
+            "science-nature",
+            "maths"
+        ],
+        "region": null,
+        "location": null,
+        "ages": [
+            "secondary",
+            "16-plus"
+        ],
+        "spotlight": false,
+        "description": "Free GCSE and A-level revision: video lessons, notes, quizzes, flashcards and exam questions, all in one place.",
+        "more": [
+            "It covers 15 subjects across ten UK and international boards, including AQA, Edexcel, OCR, WJEC, CCEA and SQA, so it works in Scotland, Wales and Northern Ireland too. Its videos have more than 184 million views on YouTube. A free account keeps track of progress."
+        ],
+        "tags": [
+            "GCSE and A-level",
+            "Every UK board",
+            "Free"
+        ],
+        "last_checked": "2026-09-24",
+        "image": "images/cognitoedu-org.png"
+    },
+    {
+        "title": "Save My Exams",
+        "url": "https://www.savemyexams.co.uk/",
+        "domain": "savemyexams.co.uk",
+        "tier": "paid",
+        "category": "exams",
+        "region": null,
+        "location": null,
+        "ages": [
+            "secondary",
+            "16-plus"
+        ],
+        "spotlight": false,
+        "description": "Revision notes, past papers and exam questions by topic and difficulty for GCSE, IGCSE and A-level, made by examiners and teachers.",
+        "more": [
+            "Some of it is free to try, but most of the notes and questions need a paid membership. It's specific to each exam board, so pick your board and specification before you start."
+        ],
+        "tags": [
+            "GCSE to A-level",
+            "By exam board",
+            "Membership"
+        ],
+        "last_checked": "2026-09-24",
+        "image": "images/savemyexams-co-uk.png"
+    },
+    {
+        "title": "Home Education Tracker",
+        "url": "https://www.homeeducationtracker.com/",
+        "domain": "homeeducationtracker.com",
+        "tier": "paid",
+        "category": "support-advice",
+        "region": null,
+        "location": null,
+        "ages": [],
+        "spotlight": false,
+        "description": "Somewhere to log what you've done as you go (tasks, classes, books, visits, milestones) so the end-of-year report nearly writes itself.",
+        "more": [
+            "Tag each entry by subject or project, add photos, and look back over any stretch of time by subject or activity type. There's a free trial, then a paid plan."
+        ],
+        "tags": [
+            "For the grown-ups",
+            "Records and reports",
+            "Free trial"
+        ],
+        "last_checked": "2026-09-24",
+        "image": "images/homeeducationtracker-com.png"
     }
 ]
